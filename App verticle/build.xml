@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- WARNING: Eclipse auto-generated file.
+              Any modifications will be overwritten.
+              To include a user specific buildfile here, simply create one in the same
+              directory with the processing instruction <?eclipse.ant.import?>
+              as the first entry and export the buildfile again. --><project basedir="." default="build" name="DAD">
+    <property environment="env"/>
+    <property name="ECLIPSE_HOME" value="../../../eclipse/jee-2019-12/eclipse/"/>
+    <property name="debuglevel" value="source,lines,vars"/>
+    <property name="target" value="1.8"/>
+    <property name="source" value="1.8"/>
+    <path id="Maven Dependencies.libraryclasspath">
+        <pathelement location="../../../.m2/repository/io/vertx/vertx-core/3.8.5/vertx-core-3.8.5.jar"/>
+        <pathelement location="../../../.m2/repository/io/netty/netty-common/4.1.42.Final/netty-common-4.1.42.Final.jar"/>
+        <pathelement location="../../../.m2/repository/io/netty/netty-buffer/4.1.42.Final/netty-buffer-4.1.42.Final.jar"/>
+        <pathelement location="../../../.m2/repository/io/netty/netty-transport/4.1.42.Final/netty-transport-4.1.42.Final.jar"/>
+        <pathelement location="../../../.m2/repository/io/netty/netty-handler/4.1.42.Final/netty-handler-4.1.42.Final.jar"/>
+        <pathelement location="../../../.m2/repository/io/netty/netty-codec/4.1.42.Final/netty-codec-4.1.42.Final.jar"/>
+        <pathelement location="../../../.m2/repository/io/netty/netty-handler-proxy/4.1.42.Final/netty-handler-proxy-4.1.42.Final.jar"/>
+        <pathelement location="../../../.m2/repository/io/netty/netty-codec-socks/4.1.42.Final/netty-codec-socks-4.1.42.Final.jar"/>
+        <pathelement location="../../../.m2/repository/io/netty/netty-codec-http/4.1.42.Final/netty-codec-http-4.1.42.Final.jar"/>
+        <pathelement location="../../../.m2/repository/io/netty/netty-codec-http2/4.1.42.Final/netty-codec-http2-4.1.42.Final.jar"/>
+        <pathelement location="../../../.m2/repository/io/netty/netty-resolver/4.1.42.Final/netty-resolver-4.1.42.Final.jar"/>
+        <pathelement location="../../../.m2/repository/io/netty/netty-resolver-dns/4.1.42.Final/netty-resolver-dns-4.1.42.Final.jar"/>
+        <pathelement location="../../../.m2/repository/io/netty/netty-codec-dns/4.1.42.Final/netty-codec-dns-4.1.42.Final.jar"/>
+        <pathelement location="../../../.m2/repository/com/fasterxml/jackson/core/jackson-core/2.9.9/jackson-core-2.9.9.jar"/>
+        <pathelement location="../../../.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.9.9.1/jackson-databind-2.9.9.1.jar"/>
+        <pathelement location="../../../.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.9.0/jackson-annotations-2.9.0.jar"/>
+        <pathelement location="../../../.m2/repository/io/vertx/vertx-web/3.8.5/vertx-web-3.8.5.jar"/>
+        <pathelement location="../../../.m2/repository/io/vertx/vertx-web-common/3.8.5/vertx-web-common-3.8.5.jar"/>
+        <pathelement location="../../../.m2/repository/io/vertx/vertx-auth-common/3.8.5/vertx-auth-common-3.8.5.jar"/>
+        <pathelement location="../../../.m2/repository/io/vertx/vertx-bridge-common/3.8.5/vertx-bridge-common-3.8.5.jar"/>
+        <pathelement location="../../../.m2/repository/io/vertx/vertx-mysql-client/3.8.5/vertx-mysql-client-3.8.5.jar"/>
+        <pathelement location="../../../.m2/repository/io/vertx/vertx-sql-client/3.8.5/vertx-sql-client-3.8.5.jar"/>
+        <pathelement location="../../../.m2/repository/io/vertx/vertx-web-client/3.8.5/vertx-web-client-3.8.5.jar"/>
+        <pathelement location="../../../.m2/repository/com/github/flicus/vertx-telegram-bot-api/1.0.3/vertx-telegram-bot-api-1.0.3.jar"/>
+        <pathelement location="../../../.m2/repository/com/github/flicus/vertx-telegram-bot-api/java/1.0.3/java-1.0.3.jar"/>
+        <pathelement location="../../../.m2/repository/log4j/log4j/1.2.17/log4j-1.2.17.jar"/>
+        <pathelement location="../../../.m2/repository/org/reflections/reflections/0.9.11/reflections-0.9.11.jar"/>
+        <pathelement location="../../../.m2/repository/com/google/guava/guava/20.0/guava-20.0.jar"/>
+        <pathelement location="../../../.m2/repository/org/javassist/javassist/3.21.0-GA/javassist-3.21.0-GA.jar"/>
+        <pathelement location="../../../.m2/repository/com/github/flicus/vertx-telegram-bot-api/kotlin/1.0.3/kotlin-1.0.3.jar"/>
+        <pathelement location="../../../.m2/repository/org/jetbrains/kotlin/kotlin-stdlib-jdk8/1.2.21/kotlin-stdlib-jdk8-1.2.21.jar"/>
+        <pathelement location="../../../.m2/repository/org/jetbrains/kotlin/kotlin-stdlib/1.2.21/kotlin-stdlib-1.2.21.jar"/>
+        <pathelement location="../../../.m2/repository/org/jetbrains/annotations/13.0/annotations-13.0.jar"/>
+        <pathelement location="../../../.m2/repository/org/jetbrains/kotlin/kotlin-stdlib-jdk7/1.2.21/kotlin-stdlib-jdk7-1.2.21.jar"/>
+        <pathelement location="../../../.m2/repository/org/jetbrains/kotlin/kotlin-reflect/1.2.21/kotlin-reflect-1.2.21.jar"/>
+        <pathelement location="../../../.m2/repository/com/fasterxml/jackson/module/jackson-module-kotlin/2.8.7/jackson-module-kotlin-2.8.7.jar"/>
+    </path>
+    <path id="DAD.classpath">
+        <pathelement location="target/classes"/>
+        <pathelement location="target/test-classes"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.ProyectoDAD.classpath">
+        <path refid="DAD.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <target name="init">
+        <mkdir dir="target/classes"/>
+        <mkdir dir="target/test-classes"/>
+        <copy includeemptydirs="false" todir="target/classes">
+            <fileset dir="src/main/java">
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+        <copy includeemptydirs="false" todir="target/classes">
+            <fileset dir="src/main/resources">
+                <exclude name="**/*.java"/>
+                <exclude name="**"/>
+            </fileset>
+        </copy>
+        <copy includeemptydirs="false" todir="target/test-classes">
+            <fileset dir="src/test/java">
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+        <copy includeemptydirs="false" todir="target/test-classes">
+            <fileset dir="src/test/resources">
+                <exclude name="**/*.java"/>
+                <exclude name="**"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="clean">
+        <delete dir="target/classes"/>
+        <delete dir="target/test-classes"/>
+    </target>
+    <target depends="clean" name="cleanall"/>
+    <target depends="build-subprojects,build-project" name="build"/>
+    <target name="build-subprojects"/>
+    <target depends="init" name="build-project">
+        <echo message="${ant.project.name}: ${ant.file}"/>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="target/classes" includeantruntime="false" source="${source}" target="${target}">
+            <src path="src/main/java"/>
+            <src path="src/main/resources"/>
+            <exclude name="**"/>
+            <classpath refid="DAD.classpath"/>
+        </javac>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="target/test-classes" includeantruntime="false" source="${source}" target="${target}">
+            <src path="src/test/java"/>
+            <src path="src/test/resources"/>
+            <exclude name="**"/>
+            <classpath refid="DAD.classpath"/>
+        </javac>
+    </target>
+    <target description="Build all projects which reference this project. Useful to propagate changes." name="build-refprojects"/>
+    <target description="copy Eclipse compiler jars to ant lib directory" name="init-eclipse-compiler">
+        <copy todir="${ant.library.dir}">
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </copy>
+        <unzip dest="${ant.library.dir}">
+            <patternset includes="jdtCompilerAdapter.jar"/>
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </unzip>
+    </target>
+    <target description="compile project with Eclipse compiler" name="build-eclipse-compiler">
+        <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
+        <antcall target="build"/>
+    </target>
+    <target name="ProyectoDAD">
+        <java classname="io.vertx.core.Launcher" failonerror="true" fork="yes">
+            <arg line="run practica1.MyFirstVerticle"/>
+            <classpath refid="run.ProyectoDAD.classpath"/>
+        </java>
+    </target>
+</project>
